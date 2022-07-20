@@ -1,24 +1,20 @@
-#include <stdio.h>
 #include <stdarg.h>
-#include <stdlib.h>
 #include <stddef.h>
 #include "main.h"
 
 /**
-* _printf - format is a character string
-* @format: Character char
+* form - format is a character string
+* @charact: Character char
 * Return: 0
 */
 
 int (*form(const char charact))(va_list)
 {
 	int l = 0;
-
+	
 	charact_t ch[] = {
-                {"c", charr},
-                {"s", str},
-                {NULL, NULL}
-        };
+		{"c", pr_char}, {"s", pr_str}, {"%", pr_percent}
+	};
 
 	while (l < 3)
 	{
@@ -28,7 +24,7 @@ int (*form(const char charact))(va_list)
 		}
 		l++;
 	}
-	return(NULL);
+	return (NULL);
 }
 
 /**
@@ -40,7 +36,7 @@ int (*form(const char charact))(va_list)
 int _printf(const char *format, ...)
 {
 	va_list list;
-	int n = 0, a = 0 ;
+	int n = 0, a = 0;
 	int (*i)();
 
 	va_start(list, format);
