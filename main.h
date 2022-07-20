@@ -5,7 +5,7 @@
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int (*form(const char charact))(va_list);
+int (*frm(const char charact))(va_list);
 int pr_char(va_list list);
 int pr_str(va_list list);
 int pr_percent(va_list list);

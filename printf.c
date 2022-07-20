@@ -3,12 +3,12 @@
 #include "main.h"
 
 /**
-* form - format is a character string
+* frm - format is a character string
 * @charact: Character char
 * Return: 0
 */
 
-int (*form(const char charact))(va_list)
+int (*frm(const char charact))(va_list)
 {
 	int l = 0;
 	
@@ -18,7 +18,7 @@ int (*form(const char charact))(va_list)
 
 	while (l < 3)
 	{
-		if (charact == ch[l].charact[0])
+		if (charact == ch[l].c[0])
 		{
 			return (ch[l].c);
 		}
@@ -48,7 +48,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[n] == '%' && format[n + 1] != '%')
 		{
-			i = form(format[n + 1]);
+			i = frm(format[n + 1]);
 			if (i == NULL)
 			{
 				_putchar(format[n]);
