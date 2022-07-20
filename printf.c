@@ -8,7 +8,7 @@
 * Return: 0
 */
 
-int (*frm(const char charact))(va_list)
+int (*frm(const char *charact, int x))(va_list)
 {
 	int l = 0;
 	
