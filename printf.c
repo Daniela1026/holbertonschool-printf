@@ -26,7 +26,7 @@ int (*frm(const char *charact, int x))(va_list)
 		l++;
 	}
 	return (NULL); */
-	for (l = 0; ch[l].chara[0] != NULL; l++)
+	for (l = 0; ch[l].chara != NULL; l++)
 	{
 		if (ch[l].chara[0] == charact[x])
 		{
