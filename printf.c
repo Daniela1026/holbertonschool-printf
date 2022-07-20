@@ -18,7 +18,7 @@ int (*frm(const char charact))(va_list)
 
 	while (l < 3)
 	{
-		if (charact == ch[l].c[0])
+		if (charact == (ch[l].c))
 		{
 			return (ch[l].c);
 		}
@@ -42,7 +42,7 @@ int _printf(const char *format, ...)
 	va_start(list, format);
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
-		return (-1);
+		return (0);
 
 	while (format[n])
 	{
