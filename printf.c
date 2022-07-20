@@ -16,7 +16,7 @@ int (*frm(const char charact))(va_list)
 		{"c", pr_char}, {"s", pr_str}, {"%", pr_percent}
 	};
 
-	while (l < 3)
+/**	while (l < 3)
 	{
 		if (charact == (ch[l].c))
 		{
@@ -24,7 +24,15 @@ int (*frm(const char charact))(va_list)
 		}
 		l++;
 	}
-	return (NULL);
+	return (NULL); */
+	for (l = 0; ch[l].chara[0] != NULL; l++)
+	{
+		if (ch[l].chara[0] == charact[x])
+		{
+			return(ch[l].c);
+		}
+	}
+	return(NULL);
 }
 
 /**

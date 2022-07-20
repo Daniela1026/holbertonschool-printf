@@ -17,10 +17,17 @@ int pr_percent(va_list list);
 * Return: 0
 */
 
-typedef struct charact
+/** Codigo Daniela
+ * typedef struct charact
 {
 	char *charact;
 	int (*c)(va_list);
-} charact_t;
+} charact_t;*/
+
+typedef struct chara
+{
+	char *chara;
+	int (*c)(va_list);
+}charact_t;
 
 #endif
