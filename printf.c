@@ -8,6 +8,7 @@
 * Return: 0
 */
 
+/**int (*frm(const char *charact, int x)(va_list)  */
 int (*frm(const char *charact, int x))(va_list)
 {
 	int l = 0;
@@ -41,7 +42,7 @@ int (*frm(const char *charact, int x))(va_list)
 * Return: 0
 */
 
-int _printf(const char *format, ...)
+/** int _printf(const char *format, ...)
 {
 	va_list list;
 	int n = 0, a = 0;
@@ -79,4 +80,4 @@ int _printf(const char *format, ...)
 	}
 	va_end(list);
 	return (a);
-}
+}*/
