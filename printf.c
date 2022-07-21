@@ -12,20 +12,20 @@
 
 int (*frm(const char *charact, int x))(va_list)
 {
-        int l = 0;
+	int l = 0;
 
-        charact_t ch[] = {
-                {"c", pr_char}, {"s", pr_str}, {"%", pr_percent}
-        };
+	charact_t ch[] = {
+		{"c", pr_char}, {"s", pr_str}, {"%", pr_percent}
+	};
 
-        for (l = 0; ch[l].chara != NULL; l++)
-        {
-                if (ch[l].chara[0] == charact[x])
-                {
-                        return (ch[l].c);
-                }
-        }
-        return (NULL);
+	for (l = 0; ch[l].chara != NULL; l++)
+	{
+		if (ch[l].chara[0] == charact[x])
+		{
+			return (ch[l].c);
+		}
+	}
+	return (NULL);
 }
 
 /**
@@ -36,41 +36,41 @@ int (*frm(const char *charact, int x))(va_list)
 
 int _printf(const char *format, ...)
 {
-        va_list list;
-        int n = 0, a = 0;
+	va_list list;
+	int n = 0, a = 0;
 
-        va_start(list, format);
+	va_start(list, format);
 
-        if (format == NULL || (format[0] == '%' && format[1] == '\0'))
-                return (-1);
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
 
-        while (format[0] != '\0')
-        {
-		if (format[n] == '%') 
+	while (format[0] != '\0')
+	{
+		if (format[n] == '%')
 		{
 			if (format[n + 1] == '%')
 			{
-                                _putchar('%');
-                                a++;
-                                n++;
-                        }
-                        else if (frm(format, n + 1) != NULL)
-                        {
-                                a += (frm(format, n + 1))(list);
-                                n++;
-                        }
+				_putchar('%');
+				a++;
+				n++;
+			}
+			else if (frm(format, n + 1) != NULL)
+			{
+				a += (frm(format, n + 1))(list);
+				n++;
+			}
 			else
 			{
 				_putchar(format[n]);
 				a++;
 			}
-                }
-                else
-                {
-                        _putchar(format[n]);
-                        n++;
-                }
-        }
-        va_end(list);
-        return (a);
+		}
+		else
+		{
+			_putchar(format[n]);
+			n++;
+		}
+	}
+	va_end(list);
+	return (a);
 }
