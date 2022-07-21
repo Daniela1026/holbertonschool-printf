@@ -56,12 +56,12 @@ int _printf(const char *format, ...)
                         }
                         else if (frm(format, n + 1) != NULL)
                         {
-                                a += (frm(format, i + 1))(list);
+                                a += (frm(format, n + 1))(list);
                                 n++;
                         }
 			else
 			{
-				_putchar(format[i]);
+				_putchar(format[n]);
 				a++;
 			}
                 }
