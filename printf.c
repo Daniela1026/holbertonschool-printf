@@ -38,35 +38,36 @@ int _printf(const char *format, ...)
 {
         va_list list;
         int n = 0, a = 0;
-        int (*i)();
 
         va_start(list, format);
 
         if (format == NULL || (format[0] == '%' && format[1] == '\0'))
-                return (0);
+                return (-1);
 
-        while (format[n])
+        while (format[0] != '\0')
         {
-                if (format[n] == '%' && format[n + 1] != '\0')
-                {
-                       i = frm(format[n + 1]);
-                        if (i == NULL)
-                        {
-                                _putchar(format[n]);
+		if (format[n] == '%') 
+		{
+			if (format[n + 1] == '%')
+			{
+                                _putchar('%');
                                 a++;
                                 n++;
                         }
-                        else
+                        else if (frm(format, n + 1) != NULL)
                         {
-                                a += i(list);
-                                n += 2;
-                                continue;
-                        };
+                                a += (frm(format, i + 1))(list);
+                                n++;
+                        }
+			else
+			{
+				_putchar(format[i]);
+				a++;
+			}
                 }
                 else
                 {
                         _putchar(format[n]);
-                        a++;
                         n++;
                 }
         }
