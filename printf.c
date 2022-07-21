@@ -33,7 +33,7 @@ int (*frm(const char *charact, int x))(va_list)
 * @format: Character char
 * Return: 0
 */
-/**
+
 int _printf(const char *format, ...)
 {
         va_list list;
@@ -49,7 +49,7 @@ int _printf(const char *format, ...)
         {
                 if (format[n] == '%' && format[n + 1] != '\0')
                 {
-                        i = frm(format[n + 1]);
+                       i = frm(format[n + 1]);
                         if (i == NULL)
                         {
                                 _putchar(format[n]);
@@ -61,7 +61,7 @@ int _printf(const char *format, ...)
                                 a += i(list);
                                 n += 2;
                                 continue;
-                        }
+                        };
                 }
                 else
                 {
@@ -72,4 +72,4 @@ int _printf(const char *format, ...)
         }
         va_end(list);
         return (a);
-}*/
+}
