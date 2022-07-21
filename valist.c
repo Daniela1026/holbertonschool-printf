@@ -11,6 +11,11 @@ int pr_char(va_list list)
 	char c;
 
 	c = va_arg(list, int);
+
+	if (c == '\0')
+	{
+		return (write(1, &c, 1));
+	}
 	_putchar(c);
 	return(1);
 }
