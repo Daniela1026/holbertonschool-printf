@@ -4,7 +4,11 @@
 #include <unistd.h>
 #include <string.h>
 
-
+/**
+* pr_char - prints
+* @list: Character va_list
+* Return: 0
+*/
 
 int pr_char(va_list list)
 {
@@ -17,9 +21,14 @@ int pr_char(va_list list)
 		return (write(1, &c, 1));
 	}
 	_putchar(c);
-	return(1);
+	return (1);
 }
 
+/**
+* pr_str - prints
+* @list: Character va_list
+* Return: 0
+*/
 
 int pr_str(va_list list)
 {
@@ -38,6 +47,11 @@ int pr_str(va_list list)
 	return (i);
 }
 
+/**
+* pr_percent - prints
+* @list: Character va_list
+* Return: 0
+*/
 
 int pr_percent(va_list list)
 {
