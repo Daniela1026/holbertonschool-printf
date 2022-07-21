@@ -56,7 +56,7 @@ int pr_str(va_list list)
 * Return: 0
 */
 
-int pr_percent(va_list, list)
+int pr_percent(va_list list)
 {
 	(void)list;
 	return (write(1, "%", 1);
