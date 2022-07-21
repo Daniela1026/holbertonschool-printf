@@ -8,8 +8,11 @@
 
 int pr_char(va_list list)
 {
-	_putchar(va_arg(list, int));
-	return(-1);
+	char c;
+
+	c = va_arg(list, int);
+	_putchar(c);
+	return(1);
 }
 
 
@@ -23,11 +26,11 @@ int pr_str(va_list list)
 		s = "(null)";
 	}
 
-	for (i = 0; s[i]; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		_putchar(s[i]);
 	}
-	return i;
+	return (i);
 }
 
 
