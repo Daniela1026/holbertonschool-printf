@@ -50,7 +50,7 @@ int _printf(const char *format, ...)
 		{
 			if (format[n + 1] == '%')
 			{
-				_putchar('%');
+				_putchar(format[n]);
 				a++;
 				n++;
 			}
