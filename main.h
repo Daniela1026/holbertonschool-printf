@@ -23,5 +23,7 @@ int (*formt(char c))(va_list);
 int print_char(va_list ch);
 int print_str(va_list st);
 int print_percent(va_list pct);
+int print_decimal(va_list dcm);
+int print_integral(va_list itg);
 
 #endif
