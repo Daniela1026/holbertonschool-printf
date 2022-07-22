@@ -15,12 +15,11 @@ int _putchar(char c)
 }
 
 /**
-* valist - string str
-* @str: Character string
-*
-* Return: 0
-*/
-
+ * valist - string str
+ * @str: Character string
+ *
+ * Return: 0
+ */
 int valist(char *str)
 {
 	int i = 0;
