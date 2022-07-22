@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- *formt -  function
- *@c: char
- *Return: 0
- */
+* formt - Function Characters
+* @c: char
+* Return: 0
+*/
 
 int (*formt(char c))(va_list)
 {

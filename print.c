@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- *print_char - print a char
- *@ch: char
- *Return: value of _putchar
- */
+* print_char - Print a char
+* @ch: Character char
+* Return: 0
+*/
 
 int print_char(va_list ch)
 {
@@ -12,10 +12,10 @@ int print_char(va_list ch)
 }
 
 /**
- *print_str - print a string
- *@st: string
- *Return: i the nbr of char print
- */
+* print_str - Print a string
+* @st: character string
+* Return: 0
+*/
 
 int print_str(va_list st)
 {
@@ -23,10 +23,10 @@ int print_str(va_list st)
 }
 
 /**
- *print_percent - print the char %
- *@pct: char
- *Return: char % -> 1
- */
+* print_percent - Print %
+* @pct: character char
+* Return: 0
+*/
 
 int print_percent(va_list pct __attribute__((unused)))
 {

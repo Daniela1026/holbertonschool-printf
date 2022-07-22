@@ -4,10 +4,10 @@
 #include <stddef.h>
 #include <unistd.h>
 /**
- *struct charact - structur
- *@charact: pointer
- *@c: function
- */
+* struct charact - Structur characters
+* @charact: pointer
+* @c: function
+*/
 
 typedef struct charact
 {

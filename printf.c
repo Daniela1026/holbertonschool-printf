@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- *_printf - function that produces output according to a format
- *@format: character string
- *Return: the number of characters printed
- */
+* _printf - Function print characters
+* @format: Character string
+* Return: 0
+*/
 
 int _printf(const char *format, ...)
 {
