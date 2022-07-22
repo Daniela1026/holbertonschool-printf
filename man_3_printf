@@ -1,0 +1,56 @@
+PRINTF
+
+NAME
+	printf
+
+SYNOPSIS
+	#include <stdio>
+
+	int _putchar(char c);
+	int valist(char *str);
+	int _printf(const char *format, ...);
+
+
+	#include #include <stdarg.h>
+	
+	int print_number(va_list list);
+	int (*formt(char c))(va_list);
+	int print_char(va_list ch);
+	int print_str(va_list st);
+	int print_percent(va_list pct);
+	int print_decimal(va_list dcm);
+	int print_integral(va_list itg);
+
+DESCRIPTiON
+
+*
+*
+*
+*
+*
+*
+*
+*
+
+
+Conversion specifiers
+
+	%c
+	Prints a variable containing an ASCII value.
+
+	%s
+	Prints an array of chars.
+
+	%
+	A '%' is written. No argument is converted. The complete conversion specification is '%%'.
+
+
+
+EXAMPLES
+	
+
+
+	int print_char(va_list ch)
+	{
+		return (_putchar(va_arg(ch, int)));
+	}
