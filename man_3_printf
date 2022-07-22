@@ -52,8 +52,6 @@ Conversion specifiers
 
 
 EXAMPLES
-	
-
     printf("Length:[%d, %i]\n", len2, len2);
 
     _printf("Negative:[%d]\n", -762534);
@@ -65,8 +63,12 @@ EXAMPLES
     _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
 
 
+The following command was used to compile the test file
+
+	gcc -Wall -Werror -Wextra -pedantic -Wno-format *.c -o a.out
+
+
 
 AUTHORS
-
-Daniela Cartagena
-Giovanni Pérez
+	Daniela Cartagena
+	Giovanni Pérez

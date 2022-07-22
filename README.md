@@ -12,9 +12,8 @@
 
 
 
-> ## Contact
-> Daniela Cartagena
-### | [mail](@holbertonschool.com) | [github](https://github.com/Giogap) |
+> ## Authors:
 
-> Giovanni Pérez
-### | [mail](@holbertonschool.com) | [github](https://github.com/Daniela1026)  |.
+> Daniela Cartagena | [mail](@holbertonschool.com) | [github](https://github.com/Giogap)
+
+> Giovanni Pérez | [mail](@holbertonschool.com) | [github](https://github.com/Daniela1026)
