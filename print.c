@@ -87,41 +87,40 @@ int print_decimal(va_list dcm)
 
 int print_integral(va_list itg)
 {
-        int i = va_arg(itg, int);
-        int n, l;
-        int a = 1, r = 1;
-        int s = i % 10;
+	int i = va_arg(itg, int);
+	int n, l;
+	int a = 1, r = 1;
+	int s = i % 10;
 
-        i = i / 10;
-        n = i;
+	i = i / 10;
+	n = i;
+	if (s < 0)
+	{
+		_putchar('-');
+		n = -n;
+		i = -i;
+		s = -s;
+		r++;
+	}
+	if (n > 0)
+	{
+		while (n / 10 != 0)
+		{
+			a = a * 10;
+			n = n / 10;
+		}
+		n = i;
+		while (a > 0)
+		{
+			l = n / a;
+			_putchar(l + '0');
+			n = n - (l * a);
+			a = a / 10;
+			r++;
+		}
+	}
+	_putchar(s + '0');
 
-        if (s < 0)
-        {
-                _putchar('-');
-                n = -n;
-                i = -i;
-                s = -s;
-                r++;
-        }
-        if (n > 0)
-        {
-                while (n / 10 != 0)
-                {
-                        a = a * 10;
-                        n = n / 10;
-                }
-                n = i;
-                while (a > 0)
-                {
-                        l = n / a;
-                        _putchar(l + '0');
-                        n = n - (l * a);
-                        a = a / 10;
-                        r++;
-                }
-        }
-        _putchar(s + '0');
-
-        return (r);
+	return (r);
 }
 
