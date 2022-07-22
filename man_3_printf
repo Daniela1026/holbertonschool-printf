@@ -44,13 +44,29 @@ Conversion specifiers
 	%
 	A '%' is written. No argument is converted. The complete conversion specification is '%%'.
 
+	%d
+	Prints a variable of type int in base 10.
+
+	%i
+	Does the same as "%d". Only differences would be in scanf (man scanf).
 
 
 EXAMPLES
 	
 
+    printf("Length:[%d, %i]\n", len2, len2);
 
-	int print_char(va_list ch)
-	{
-		return (_putchar(va_arg(ch, int)));
-	}
+    _printf("Negative:[%d]\n", -762534);
+
+    printf("Unsigned:[%u]\n", ui);
+
+    printf("Unsigned octal:[%o]\n", ui);
+
+    _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+
+
+
+AUTHORS
+
+Daniela Cartagena
+Giovanni Pérez
