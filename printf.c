@@ -1,75 +1,50 @@
-#include <stdarg.h>
-#include <stdio.h>
-#include <stddef.h>
 #include "main.h"
 
 /**
-* frm - format is a character string
-* @charact: Character char
-* @x: Character int
-* Return: 0
-*/
-
-int (*frm(const char *charact, int x))(va_list)
-{
-	int l = 0;
-
-	charact_t ch[] = {
-		{"c", pr_char}, {"s", pr_str}, {"%", pr_percent}
-	};
-
-	for (l = 0; ch[l].chara != NULL; l++)
-	{
-		if (ch[l].chara[0] == charact[x])
-		{
-			return (ch[l].c);
-		}
-	}
-	return (NULL);
-}
-
-/**
-* _printf - format is a character string
-* @format: Character char
-* Return: 0
-*/
+ *_printf - function that produces output according to a format
+ *@format: character string
+ *Return: the number of characters printed
+ */
 
 int _printf(const char *format, ...)
 {
+	int (*c)(va_list);
+	int n = 0;
+	int a = 0;
+
 	va_list list;
-	int n = 0, a = 0;
+
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+	{
+		return (-1);
+	}
 
 	va_start(list, format);
-
-	if (format == NULL)
-		return (-1);
 
 	while (format[n])
 	{
 		if (format[n] == '%')
 		{
-			if (format[n + 1] == '%')
+			if (format[n + 1] != '\0')
 			{
-				_putchar('%');
-				a++;
-				n++;
+				c = formt(format[n + 1]);
 			}
-			else if (frm(format, n + 1) != NULL)
+			if (c == NULL)
 			{
-				a += (frm(format, n + 1))(list);
+				_putchar(format[n]);
+				a++;
 				n++;
 			}
 			else
 			{
-				_putchar(format[n]);
-				a++;
+				a += c(list);
+				n += 2;
+				continue;
 			}
 		}
-		else
-		{
-			_putchar(format[n]);
-			n++;
-		}
+		_putchar(format[n]);
+		a++;
+		n++;
 	}
 	va_end(list);
 	return (a);

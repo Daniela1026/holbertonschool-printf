@@ -1,26 +1,27 @@
 #ifndef MAIN_H_
 #define MAIN_H_
 #include <stdarg.h>
-
-
-int _putchar(char c);
-int _printf(const char *format, ...);
-int (*frm(const char *charact, int x))(va_list);
-int pr_char(va_list list);
-int pr_str(va_list list);
-int pr_percent(va_list list);
-
+#include <stddef.h>
+#include <unistd.h>
 /**
-* struct chara - format output
-* @chara: Character char
-* @c: Character c
-* Return: 0
-*/
+ *struct charact - structur
+ *@charact: pointer
+ *@c: function
+ */
 
-typedef struct chara
+typedef struct charact
 {
-	char *chara;
+	char *charact;
 	int (*c)(va_list);
 } charact_t;
+
+int _putchar(char c);
+int valist(char *str);
+int _printf(const char *format, ...);
+int print_number(va_list list);
+int (*formt(char c))(va_list);
+int print_char(va_list ch);
+int print_str(va_list st);
+int print_percent(va_list pct);
 
 #endif
