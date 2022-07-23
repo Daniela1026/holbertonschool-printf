@@ -1,34 +1,29 @@
 #include "main.h"
-#include <stdlib.h>
 #include <unistd.h>
+#include <stdlib.h>
 /**
- * printf_R - check code
+ * print_R - check code
  * @list: value
- * Return: n
+ * Return: len
  */
-int printf_cs(va_list list)
+int print_sc(va_list list)
 {
 	int i, j, n = 0;
-	char *s, *t;
+    char *s, *t;
 	char a[] = {"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"};
 	char r[] = {"NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm"};
 
 	s = va_arg(list, char *);
-
 	for (i = 0; s[i] != '\0'; i++)
-    	{
-		n++;
-    	}
+    {
+        n++;
+    }
 	t = malloc(sizeof(char) * (n + 1));
 	if (!t)
-	{
 		return ('\0');
-	}
-	i = 0;
-	while (i <= n)
+	for (i = 0; i <= n; i++)
 	{
 		t[i] = s[i];
-		i++;
 	}
 	for (i = 0; t[i] != '\0'; i++)
 	{
@@ -42,9 +37,7 @@ int printf_cs(va_list list)
 		}
 	}
 	for (i = 0; t[i] != '\0'; i++)
-	{
 		write(1, &t[i], 1);
-	}
 	free(t);
 	return (n);
 }
