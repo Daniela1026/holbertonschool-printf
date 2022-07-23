@@ -7,6 +7,8 @@
 *The printf (print formatted) function prints a message to the screen, uses a format string, includes multiple string instructions in the final string to be printed
 
 
+# Flowchart
+
 
 
 
@@ -14,6 +16,6 @@
 
 > ## Authors:
 
-> Daniela Cartagena | [mail](@holbertonschool.com) | [github](https://github.com/Giogap)
+> Daniela Cartagena | [github](https://github.com/Giogap)
 
-> Giovanni Pérez | [mail](@holbertonschool.com) | [github](https://github.com/Daniela1026)
+> Giovanni Pérez | [github](https://github.com/Daniela1026)
