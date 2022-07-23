@@ -6,7 +6,7 @@
  * @list: value
  * Return: n
  */
-int printf_R(va_list list)
+int printf_cs(va_list list)
 {
 	int i, j, n = 0;
 	char *s, *t;
@@ -36,7 +36,7 @@ int printf_R(va_list list)
 		{
 			if (t[i] == a[j])
 			{
-				m[i] = r[j];
+				t[i] = r[j];
 				break;
 			}
 		}

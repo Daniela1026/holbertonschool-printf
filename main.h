@@ -25,5 +25,6 @@ int print_str(va_list st);
 int print_percent(va_list pct);
 int print_decimal(va_list dcm);
 int print_integral(va_list itg);
+int printf_cs(va_list list);
 
 #endif
