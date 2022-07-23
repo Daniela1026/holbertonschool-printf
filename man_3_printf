@@ -23,14 +23,10 @@ SYNOPSIS
 
 DESCRIPTiON
 
-*
-*
-*
-*
-*
-*
-*
-*
+	int_printf(const char *format, ...)
+	Prints string or integer number
+	Prints string
+	ls function _print calls the formt function where the string formatting function is located, it prints a single character.
 
 
 Conversion specifiers
